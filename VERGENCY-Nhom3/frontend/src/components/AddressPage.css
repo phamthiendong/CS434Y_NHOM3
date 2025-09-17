@@ -1,0 +1,270 @@
+.address-page-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.address-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.address-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a202c;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.add-new-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #4299e1;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-new-btn:hover {
+    background: #3182ce;
+}
+
+/* Form Container */
+.address-form-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+
+.form-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 18px 25px;
+}
+
+.form-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.address-form {
+    padding: 30px 25px;
+    display: grid;
+    grid-template-columns: 150px 1fr; 
+    gap: 20px 15px; 
+    align-items: center; 
+}
+
+.address-form input[type="text"],
+.address-form input[type="tel"],
+.address-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px; 
+    border: 1px solid #cbd5e0;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #fdfdff;
+}
+.address-form input:focus,
+.address-form select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+.address-form select:disabled {
+    background-color: #f7fafc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* CSS cho label */
+.address-form > label {
+    font-weight: 500;
+    color: #4a5568;
+    font-size: 14px;
+    text-align: right;
+}
+.required {
+    color: #e53e3e;
+}
+
+.form-group-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    grid-column: 2;
+}
+
+.address-form > input,
+.address-form > select {
+    grid-column: 2; 
+}
+
+.form-group-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.form-group-checkbox input { width: auto; margin:0; }
+.form-group-checkbox label { font-weight: 500; cursor: pointer; text-align: left; margin:0; }
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+.btn-primary, .btn-secondary {
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+}
+.btn-primary { background-color: #28a745; color: white; }
+.btn-primary:hover:not(:disabled) { background-color: #218838; }
+.btn-secondary { background-color: #e2e8f0; color: #2d3748; }
+.btn-secondary:hover:not(:disabled) { background-color: #cbd5e0; }
+
+.address-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.address-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+.address-card-body h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a202c;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.default-badge {
+    background-color: #c6f6d5;
+    color: #22543d;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.address-card-body .address-line,
+.address-card-body .phone {
+    margin: 4px 0;
+    color: #4a5568;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.address-card-actions {
+    display: flex;
+    gap: 10px;
+}
+.address-card-actions button {
+    background: none;
+    border: 1px solid #e2e8f0;
+    color: #4a5568;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+.address-card-actions button:hover {
+    background-color: #f7fafc;
+}
+.address-card-actions .btn-delete:hover {
+    background-color: #fef2f2;
+    color: #e53e3e;
+    border-color: #fca5a5;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 16px;
+    border: 1px dashed #e2e8f0;
+}
+.empty-icon {
+    font-size: 48px;
+    color: #cbd5e0;
+    margin-bottom: 20px;
+}
+.empty-state h3 {
+    font-size: 22px;
+    color: #2d3748;
+    margin-bottom: 12px;
+}
+.empty-state p {
+    color: #718096;
+    margin-bottom: 30px;
+}
+
+.toast {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.toast-success { background-color: #48bb78; }
+.toast-error { background-color: #f56565; }
+.toast-close { background: none; border: none; color: white; cursor: pointer; padding: 0; }
+@keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0); } }
+
+@media (max-width: 768px) {
+    .address-form {
+        display: block; 
+    }
+    .address-form > label {
+        text-align: left;
+        padding-right: 0;
+        margin-top: 20px;
+        margin-bottom: 8px;
+    }
+    .form-group-duo { 
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+}
