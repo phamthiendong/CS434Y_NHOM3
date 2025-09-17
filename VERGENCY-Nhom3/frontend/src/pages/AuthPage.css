@@ -1,0 +1,158 @@
+/* --- AUTH PAGE CSS - PHIÊN BẢN SỬA LỖI XUNG ĐỘT --- */
+
+.auth-body-microsoft {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 140px);
+    margin: -4rem 0;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+.auth-container-microsoft {
+    background-color: #fff;
+    width: 100%;
+    max-width: 440px;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container-microsoft .form-header {
+    margin-bottom: 24px;
+    text-align: center;
+    background: none;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* Header VERGENCY với màu gradient */
+.auth-container-microsoft .brand-name {
+    display: inline-block;
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #667eea);
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
+}
+
+.auth-container-microsoft .auth-form {
+    display: flex;
+    flex-direction: column;
+    animation: fadeInForm 0.6s ease-out;
+}
+
+@keyframes fadeInForm {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-container-microsoft .auth-title-microsoft {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 28px;
+    color: #1b1b1b;
+    text-align: center; 
+}
+
+/* === HIỆU ỨNG FLOATING LABEL (ĐÃ TĂNG ĐỘ ƯU TIÊN) === */
+.auth-container-microsoft .input-group {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+/* Input được bo tròn và có viền */
+.auth-container-microsoft .input-group input {
+    width: 100%;
+    border: 1px solid #ced4da; /* Thêm viền */
+    border-radius: 8px; /* Bo góc */
+    padding: 14px 16px; /* Padding cho chữ bên trong */
+    background-color: #f5f6f7;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.2s ease;
+}
+
+.auth-container-microsoft .input-group label {
+    position: absolute;
+    top: 15px; /* Điều chỉnh vị trí label */
+    left: 16px;
+    color: #6c757d;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+    z-index: 2;
+    background-color: #f5f6f7; /* Nền cho label để che viền */
+    padding: 0 5px; /* Khoảng cách nhỏ 2 bên label */
+}
+
+/* Hiệu ứng trượt lên */
+.auth-container-microsoft .input-group input:focus + label,
+.auth-container-microsoft .input-group input:not(:placeholder-shown) + label {
+    top: -8px; /* Vị trí khi trượt lên */
+    font-size: 12px;
+    color: #0d6efd; /* Đổi màu khi focus */
+}
+
+.auth-container-microsoft .input-group input:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+    background-color: #fff;
+}
+
+.auth-container-microsoft .auth-links {
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 24px;
+}
+
+.auth-container-microsoft .auth-links a {
+    color: #0d6efd;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-container-microsoft .btn-submit-microsoft {
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.auth-container-microsoft .btn-submit-microsoft:hover {
+    background-color: #0b5ed7;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.auth-container-microsoft .auth-error-microsoft {
+    color: #dc3545;
+    font-size: 14px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.auth-container-microsoft .switch-form-prompt {
+    font-size: 15px;
+    color: #605e5c;
+    text-align: center;
+}
+
+.auth-container-microsoft .switch-form-prompt span {
+    color: #0d6efd;
+    font-weight: 600;
+    cursor: pointer;
+}
