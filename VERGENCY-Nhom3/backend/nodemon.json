@@ -1,0 +1,6 @@
+{
+  "watch": [".", ".env"],
+  "ext": "js,json",
+  "ignore": ["src/logs/*", "node_modules/*", "frontend/build/*"],
+  "exec": "node index.js"
+}
