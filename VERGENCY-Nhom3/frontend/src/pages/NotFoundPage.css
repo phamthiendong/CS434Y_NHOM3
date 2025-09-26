@@ -1,0 +1,50 @@
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 40px 0;
+}
+
+.not-found-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-404-image {
+    max-width: 500px; 
+    width: 100%;      
+    height: auto;   
+    margin-bottom: 30px; 
+}
+
+.message-box {
+    margin-top: 20px;
+    color: #555;
+}
+
+.message-box p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #555;
+}

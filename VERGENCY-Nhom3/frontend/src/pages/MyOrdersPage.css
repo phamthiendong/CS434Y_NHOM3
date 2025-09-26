@@ -1,0 +1,155 @@
+.my-orders-page-container {
+    width: 100%;
+}
+
+.my-orders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.my-orders-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-count-badge {
+    background-color: #edf2f7;
+    color: #4a5568;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.table-responsive {
+    overflow-x: auto; 
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.orders-table th, .orders-table td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.orders-table thead th {
+    background-color: #f8fafc;
+    color: #718096;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.orders-table tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+.order-id-link {
+    color: #4299e1;
+    font-weight: 600;
+    text-decoration: none;
+}
+.order-id-link:hover {
+    text-decoration: underline;
+}
+
+.product-info-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.product-image-table {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid #e2e8f0;
+}
+
+.product-name-table {
+    font-weight: 500;
+    color: #2d3748;
+}
+
+.product-more-items {
+    font-size: 12px;
+    color: #718096;
+}
+
+.order-total-price {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* Trạng thái đơn hàng */
+.status-badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 16px;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap; 
+}
+
+.status-success { background: #c6f6d5; color: #22543d; }
+.status-pending { background: #fef5e7; color: #c05621; }
+.status-delivered { background: #bee3f8; color: #2a69ac; }
+.status-processing { background: #e9d8fd; color: #553c9a; }
+
+
+/* Trạng thái loading, error, empty */
+.loading-container, .error-container, .empty-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: #718096;
+}
+
+.empty-icon {
+    font-size: 48px;
+    color: #cbd5e0;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    font-size: 20px;
+    color: #2d3748;
+    margin: 0 0 0.5rem 0;
+}
+
+.shop-now-btn {
+    display: inline-block;
+    background-color: #4299e1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+}
+
+.shop-now-btn:hover {
+    background-color: #3182ce;
+}
