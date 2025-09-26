@@ -1,0 +1,154 @@
+/* --- Cấu trúc thẻ sản phẩm chung --- */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Phần hình ảnh --- */
+.product-card__image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  background-color: #f7f7f7;
+}
+
+.product-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* --- Nhãn giảm giá (%) --- */
+.sale-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #ef4444;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* --- Lớp phủ "HẾT HÀNG" --- */
+.sold-out-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.sold-out-text {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 8px 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+/* --- Phần thông tin (thân thẻ) --- */
+.product-card__body {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Tên thương hiệu (VERGENCY) */
+.product-brand {
+  margin: 0 0 4px 0; /* CẬP NHẬT: Thêm margin-bottom nhỏ */
+  font-size: 14px;
+  font-weight: 800;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Tên sản phẩm */
+.product-name {
+  font-size: 15px;
+  font-weight: 500; /* CẬP NHẬT: Giảm độ đậm */
+  line-height: 1.4;
+  color: #212529;
+  margin: 0; /* CẬP NHẬT: Xóa margin cũ */
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 42px;
+}
+
+.product-name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --- Thông tin meta: Chỉ còn Rating --- */
+.product-meta {
+  display: flex;
+  align-items: center;
+  margin-top: 8px; /* CẬP NHẬT: Thay margin-bottom bằng margin-top */
+}
+
+.rating span i {
+  color: #facc15;
+  font-size: 14px;
+}
+
+/* --- Phần giá sản phẩm --- */
+.price-container {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 12px; /* CẬP NHẬT: Thay auto bằng giá trị cụ thể để khoảng cách đều */
+
+  border-top: 2px solid #e0e0e0; /* Đường kẻ ngăn cách */
+  padding-top: 10px;              /* Tạo khoảng cách với rating */
+  margin-left: -14px;   /* bằng với padding của .product-card__body */
+  margin-right: -14px;  /* để border full ngang */
+  padding-left: 14px;   /* thêm lại padding cho nội dung */
+  padding-right: 14px;
+}
+
+
+/* Giá khuyến mãi */
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ef4444;
+}
+
+/* Giá gốc (bị gạch ngang) */
+.original-price {
+  font-size: 14px;
+  color: black;
+  text-decoration: line-through;
+  margin-left: auto;   /* đẩy giá gốc sang phải */
+  white-space: nowrap; /* tránh bị xuống dòng */
+}
